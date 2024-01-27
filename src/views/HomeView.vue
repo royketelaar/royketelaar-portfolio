@@ -27,13 +27,13 @@ export default {
 </script>
 
 <template>
+  <!-- Background image -->
+  <img
+    src="../assets/images/background.jpg"
+    alt="Background"
+    class="fixed w-screen h-screen object-cover"
+  />
   <main>
-    <!-- Background image -->
-    <img
-      src="../assets/images/background.jpg"
-      alt="Background"
-      class="fixed w-screen h-screen object-cover"
-    />
     <div class="relative flex flex-row font-sans">
       <!-- Content -->
       <div
@@ -49,7 +49,7 @@ export default {
         />
         <div class="lg:w-2/3 lg:pr-4">
           <!-- Name -->
-          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">Roy Ketelaar</h1>
+          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">Roy Test Ketelaar</h1>
 
           <!-- Job -->
           <h2 class="text-xl text-center mb-6 lg:text-left">Front-end Developer</h2>
