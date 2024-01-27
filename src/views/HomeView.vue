@@ -27,14 +27,14 @@ export default {
 </script>
 
 <template>
-  <main class="pb-12 h-screen">
+  <main class="h-full">
     <!-- Background image -->
     <img
       src="../assets/images/background.jpg"
       alt="Background"
-      class="fixed w-screen h-full object-cover"
+      class="fixed w-screen h-screen object-cover"
     />
-    <div class="relative flex flex-row font-sans">
+    <div class="relative flex flex-row font-sans h-full">
       <!-- Content -->
       <div
         class="relative rounded-2xl text-stone-950 bg-stone-50 bg-opacity-80 top-36 p-8 pt-48 mx-8 mb-64 md:px-16 md:pb-16 md:mx-16 lg:pt-16 xl:max-w-4xl xl:mx-auto"
@@ -49,7 +49,7 @@ export default {
         />
         <div class="lg:w-2/3 lg:pr-4">
           <!-- Name -->
-          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">Roy Ketelaar</h1>
+          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">TESTRoy Ketelaar</h1>
 
           <!-- Job -->
           <h2 class="text-xl text-center mb-6 lg:text-left">Front-end Developer</h2>
