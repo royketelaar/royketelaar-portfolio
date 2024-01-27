@@ -30,10 +30,5 @@ export default {
 <style>
 body {
   font-family: 'Noto Serif', serif;
-  height: 100vh;
 }
-#app {
-  height: 100%;
-}
-
 </style>
