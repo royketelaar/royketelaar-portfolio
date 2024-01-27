@@ -23,7 +23,7 @@ const aboutMeText = [
 
 <template>
   <main
-    class="min-h-screen flex items-center justify-center font-sans bg-cover bg-fixed"
+    class="min-h-screen flex items-center justify-center font-sans bg-cover bg-fixed bg-center"
     :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
   >
     <!-- Content -->
