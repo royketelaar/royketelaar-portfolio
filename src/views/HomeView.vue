@@ -39,7 +39,7 @@ const aboutMeText = [
       <div class="lg:w-2/3 lg:pr-4">
         <!-- Name -->
         <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">
-          Roy Test Ketelaar
+          Roy Ketelaar
         </h1>
 
         <!-- Job -->
