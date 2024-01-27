@@ -1,40 +1,36 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import backgroundImage from '../assets/images/background.jpg'
 
-<script>
-export default {
-  data() {
-    return {
-      aboutMeText: [
-        {
-          text: 'Hi there, my name is Roy Ketelaar. I am a frontend developer with a background in web design.'
-        },
-        {
-          text: 'I love learning new things, working with people and building applications that users find useful.'
-        },
-        {
-          text: 'I enjoy the process of trial-and-error, optimizing, and creating a good user experience.'
-        },
-        {
-          text: 'To make this happen, I think from a Design Thinking perspective, i.e. first understanding the user and putting yourself in their position before actually starting the work.'
-        },
-        {
-          text: 'Outside of work, I like experiencing new things, traveling to cool places and maintaining an active lifestyle 🏋🏻🥾'
-        }
-      ]
-    }
+const aboutMeText = [
+  {
+    text: 'Hi there, my name is Roy Ketelaar. I am a frontend developer with a background in web design.'
+  },
+  {
+    text: 'I love learning new things, working with people and building applications that users find useful.'
+  },
+  {
+    text: 'I enjoy the process of trial-and-error, optimizing, and creating a good user experience.'
+  },
+  {
+    text: 'To make this happen, I think from a Design Thinking perspective, i.e. first understanding the user and putting yourself in their position before actually starting the work.'
+  },
+  {
+    text: 'Outside of work, I like experiencing new things, traveling to cool places and maintaining an active lifestyle 🏋🏻🥾'
   }
-}
+]
+
 </script>
 
 <template>
-  <main class="bg-yellow-400 min-h-screen flex items-center justify-center font-sans">
+  <main
+    class="min-h-screen flex items-center justify-center font-sans bg-cover bg-fixed"
+    :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+  >
     <!-- Content -->
     <div
       class="relative rounded-2xl text-stone-950 bg-stone-50 bg-opacity-80 top-36 p-8 pt-48 mx-8 mb-64 md:px-16 md:pb-16 md:mx-16 lg:pt-16 xl:max-w-4xl xl:mx-auto"
     >
       <!-- Avatar image (from the images folder, avatar.jpg) -->
-
-      <!-- From larger screens and up, make sure the avatar is on the top right side -->
       <img
         src="../assets/images/avatar.jpg"
         alt="Avatar"
