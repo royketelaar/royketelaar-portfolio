@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <main class="h-screen md:flex md:flex-col md:justify-center">
+  <main>
     <!-- Background image -->
     <img
       src="../assets/images/background.jpg"
@@ -58,24 +58,6 @@ export default {
           <p class="text-stone-950 mb-4" v-for="(item, index) in aboutMeText" :key="index">
             {{ item.text }}
           </p>
-
-          <!-- Add this as a nicely styled list in the style of the rest of the style, please add tailwind classes -->
-          <!-- Languages
-            * HTML
-            * CSS
-            * JavaScript / TypeScript
-
-            Frameworks
-            * React.js
-            * Gatsby.js
-            * Vue.js
-            * Node.js
-
-            Design & Methodology
-            * UI/UX Design
-            * Design Thinking
-            * SCRUM 
-          -->
 
           <div class="flex flex-col mb-4">
             <h3 class="font-bold mb-1">Languages</h3>
