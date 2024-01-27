@@ -29,11 +29,13 @@ export default {
 <template>
   <main class="h-screen md:flex md:flex-col md:justify-center">
     <!-- Background image -->
-    <img
-      src="../assets/images/background.jpg"
-      alt="Background"
-      class="fixed w-screen h-full object-cover overflow-hidden top-0 left-0 z-0"
-    />
+    <div class="fixed w-screen h-full overflow-hidden top-0 left-0 z-0">
+      <img
+        src="../assets/images/background.jpg"
+        alt="Background"
+        class="w-full h-full object-cover"
+      />
+    </div>
     <div class="relative flex flex-row font-sans">
       <!-- Content -->
       <div
