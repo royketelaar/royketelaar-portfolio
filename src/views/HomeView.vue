@@ -37,7 +37,7 @@ export default {
     <div class="relative flex flex-row">
       <!-- Content -->
       <div
-      class="relative rounded-2xl text-stone-950 bg-stone-50 bg-opacity-80 top-36 p-8 pt-48 mx-8 mb-64 md:px-16 md:pb-16 md:mx-16 lg:pt-16 xl:max-w-4xl xl:mx-auto"
+        class="relative rounded-2xl text-stone-950 bg-stone-50 bg-opacity-80 top-36 p-8 pt-48 mx-8 mb-64 md:px-16 md:pb-16 md:mx-16 lg:pt-16 xl:max-w-4xl xl:mx-auto"
       >
         <!-- Avatar image (from the images folder, avatar.jpg) -->
 
