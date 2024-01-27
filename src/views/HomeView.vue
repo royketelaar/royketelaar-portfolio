@@ -27,12 +27,12 @@ export default {
 </script>
 
 <template>
-  <main>
+  <main class="pb-12 h-screen">
     <!-- Background image -->
     <img
       src="../assets/images/background.jpg"
       alt="Background"
-      class="fixed w-screen h-screen object-cover"
+      class="fixed w-screen h-full object-cover"
     />
     <div class="relative flex flex-row font-sans">
       <!-- Content -->
