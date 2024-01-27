@@ -32,9 +32,9 @@ export default {
     <img
       src="../assets/images/background.jpg"
       alt="Background"
-      class="fixed w-screen h-screen object-cover"
+      class="fixed w-screen h-full object-cover overflow-hidden top-0 left-0 z-0"
     />
-    <div class="relative flex flex-row">
+    <div class="relative flex flex-row font-sans">
       <!-- Content -->
       <div
         class="relative rounded-2xl text-stone-950 bg-stone-50 bg-opacity-80 top-36 p-8 pt-48 mx-8 mb-64 md:px-16 md:pb-16 md:mx-16 lg:pt-16 xl:max-w-4xl xl:mx-auto"
@@ -49,15 +49,61 @@ export default {
         />
         <div class="lg:w-2/3 lg:pr-4">
           <!-- Name -->
-          <h1 class="font-black text-4xl text-center mb-1 lg:text-left">Roy Ketelaar</h1>
+          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">Roy Ketelaar</h1>
 
           <!-- Job -->
-          <h2 class="text-xl text-center mb-6 lg:text-left">Front-end Developer</h2>
+          <h2 class="text-xl text-center mb-6 lg:text-left font-serif">Front-end Developer</h2>
 
           <!-- About me text -->
           <p class="text-stone-950 mb-4" v-for="(item, index) in aboutMeText" :key="index">
             {{ item.text }}
           </p>
+
+          <!-- Add this as a nicely styled list in the style of the rest of the style, please add tailwind classes -->
+          <!-- Languages
+            * HTML
+            * CSS
+            * JavaScript / TypeScript
+
+            Frameworks
+            * React.js
+            * Gatsby.js
+            * Vue.js
+            * Node.js
+
+            Design & Methodology
+            * UI/UX Design
+            * Design Thinking
+            * SCRUM 
+          -->
+
+          <div class="flex flex-col mb-4">
+            <h3 class="font-bold mb-1">Languages</h3>
+            <ul class="list-disc list-inside">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript / TypeScript</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col mb-4">
+            <h3 class="font-bold mb-1">Frameworks</h3>
+            <ul class="list-disc list-inside">
+              <li>React.js</li>
+              <li>Gatsby.js</li>
+              <li>Vue.js</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col mb-4">
+            <h3 class="font-bold mb-1">Design & Methodology</h3>
+            <ul class="list-disc list-inside">
+              <li>UI/UX Design</li>
+              <li>Design Thinking</li>
+              <li>SCRUM</li>
+            </ul>
+          </div>
 
           <!-- Actions -->
           <div class="flex items-center mt-12">
