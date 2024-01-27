@@ -29,19 +29,19 @@ export default {
 <template>
   <main class="h-screen md:flex md:flex-col md:justify-center">
     <!-- Background image -->
-    <div class="fixed w-screen h-full overflow-hidden top-0 left-0 z-0">
-      <img
-        src="../assets/images/background.jpg"
-        alt="Background"
-        class="w-full h-full object-cover"
-      />
-    </div>
+    <img
+      src="../assets/images/background.jpg"
+      alt="Background"
+      class="fixed w-screen h-screen object-cover"
+    />
     <div class="relative flex flex-row font-sans">
       <!-- Content -->
       <div
         class="relative rounded-2xl text-stone-950 bg-stone-50 bg-opacity-80 top-36 p-8 pt-48 mx-8 mb-64 md:px-16 md:pb-16 md:mx-16 lg:pt-16 xl:max-w-4xl xl:mx-auto"
       >
         <!-- Avatar image (from the images folder, avatar.jpg) -->
+
+        <!-- From larger screens and up, make sure the avatar is on the top right side -->
         <img
           src="../assets/images/avatar.jpg"
           alt="Avatar"
@@ -49,10 +49,10 @@ export default {
         />
         <div class="lg:w-2/3 lg:pr-4">
           <!-- Name -->
-          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">TESTRoy Ketelaar</h1>
+          <h1 class="font-black text-4xl text-center mb-1 lg:text-left font-serif">Roy Ketelaar</h1>
 
           <!-- Job -->
-          <h2 class="text-xl text-center mb-6 lg:text-left font-serif">Front-end Developer</h2>
+          <h2 class="text-xl text-center mb-6 lg:text-left">Front-end Developer</h2>
 
           <!-- About me text -->
           <p class="text-stone-950 mb-4" v-for="(item, index) in aboutMeText" :key="index">
