@@ -62,10 +62,9 @@ const aboutMeText = [
         <div class="flex flex-col mb-4">
           <h3 class="font-bold mb-1">Frameworks</h3>
           <ul class="list-disc list-inside">
-            <li>Vue.js</li>
-            <li>React.js</li>
-            <li>Gatsby.js</li>
-            <li>Node.js</li>
+            <li>Vue</li>
+            <li>React</li>
+            <li>Node</li>
           </ul>
         </div>
 
