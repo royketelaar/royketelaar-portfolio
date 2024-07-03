@@ -51,20 +51,21 @@ const aboutMeText = [
         </p>
 
         <div class="flex flex-col mb-4">
-          <h3 class="font-bold mb-1">Languages</h3>
+          <h3 class="font-bold mb-1">Programming</h3>
           <ul class="list-disc list-inside">
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript / TypeScript</li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col mb-4">
-          <h3 class="font-bold mb-1">Frameworks</h3>
-          <ul class="list-disc list-inside">
             <li>Vue</li>
+            <li>Nuxt.js</li>
             <li>React</li>
-            <li>Node</li>
+            <li>Gatsby.js</li>
+            <li>Next.js</li>
+            <li>Node.js</li>
+            <li>Git</li>
+            <li>Netlify</li>
+            <li>Playwright</li>
+            <li>SEO</li>
           </ul>
         </div>
 
