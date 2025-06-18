@@ -11,24 +11,57 @@
       <nuxt-img src="/avatar.jpg" alt="Avatar" class="avatar" />
       <content-renderer :value="home" class="text-content" />
       <div class="actions">
-        <a href="mailto:info@royketelaar.nl">
-          <button class="button">Get in touch!</button>
-        </a>
-
-        <a
-          href="https://github.com/royketelaar/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <icon name="uil:github" class="icon" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/roy-ketelaar-36821b6b/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <icon name="entypo-social:linkedin" class="icon" />
-        </a>
+        <div class="main-actions">
+          <a href="mailto:info@royketelaar.nl">
+            <button class="button" type="button">Get in touch!</button>
+          </a>
+          <a
+            href="https://github.com/royketelaar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+          >
+            <icon
+              name="uil:github"
+              class="icon"
+              aria-hidden="true"
+              focusable="false"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/roy-ketelaar-36821b6b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+          >
+            <icon
+              name="entypo-social:linkedin"
+              class="icon"
+              aria-hidden="true"
+              focusable="false"
+            />
+          </a>
+        </div>
+        <div class="legal-links">
+          <a
+            href="/algemene-voorwaarden.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Algemene Voorwaarden (PDF)"
+            class="link"
+          >
+            Algemene Voorwaarden
+          </a>
+          <a
+            href="/privacy-verklaring.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Privacy Verklaring (PDF)"
+            class="link"
+          >
+            Privacy Verklaring
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -83,7 +116,11 @@ ul {
 }
 
 .actions {
-  @apply flex items-center mt-12;
+  @apply flex flex-col items-start mt-12;
+}
+
+.main-actions {
+  @apply flex items-center;
 }
 
 .button {
@@ -92,6 +129,14 @@ ul {
 
 .icon {
   @apply mx-2 w-6 h-6;
+}
+
+.legal-links {
+  @apply flex gap-4 mt-6;
+}
+
+.link {
+  @apply text-red-900 underline hover:text-red-700 transition-colors;
 }
 
 /* Add fade transition styles */
