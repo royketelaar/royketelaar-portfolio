@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     repository: {
       provider: 'github',
       owner: 'royketelaar',
-      repo: 'royketelaar-nuxt',
+      repo: 'royketelaar-portfolio',
       branch: 'master'
     }
   }
