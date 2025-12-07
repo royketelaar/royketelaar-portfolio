@@ -6,6 +6,13 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true
+    }
+  },
+
   content: {
     preview: {
       api: 'https://api.nuxt.studio'
