@@ -6,14 +6,6 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
-
-  ssr: false, 
-  app: {
-    head: {
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
-    }
-  },
-
   content: {
     preview: {
       api: 'https://api.nuxt.studio'
@@ -25,6 +17,17 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/image',
-    '@nuxtjs/tailwindcss'
-  ]
+    '@nuxtjs/tailwindcss',
+    'nuxt-studio'
+  ],
+
+  studio: {
+    route: '/admin',
+    repository: {
+      provider: 'github',
+      owner: 'royketelaar',
+      repo: 'royketelaar-nuxt',
+      branch: 'master'
+    }
+  }
 })
