@@ -3,9 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 5
   },
-
   nitro: {
     prerender: {
       routes: ['/'],
@@ -13,11 +12,11 @@ export default defineNuxtConfig({
     }
   },
 
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio'
-    }
-  },
+  // content: {
+  //   preview: {
+  //     api: 'https://api.nuxt.studio'
+  //   }
+  // },
 
   modules: [
     '@nuxt/content',
