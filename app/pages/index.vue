@@ -2,13 +2,23 @@
   <main v-if="home" class="h-screen">
     <nuxt-img
       src="/background.jpg"
-      alt="Background"
+      alt=""
       class="background-image"
-      quality="80"
+      quality="85"
+      sizes="100vw sm:100vw md:100vw"
       format="webp"
     />
     <div v-if="home" class="content">
-      <nuxt-img src="/avatar.jpg" alt="Avatar" class="avatar" />
+      <nuxt-img
+        src="/avatar.jpg"
+        alt=""
+        class="avatar"
+        quality="85"
+        width="300"
+        height="300"
+        fit="cover"
+        format="webp"
+      />
       <content-renderer :value="home" class="text-content" />
       <div class="actions">
         <div class="main-actions">
