@@ -38,7 +38,6 @@
             href="https://github.com/royketelaar/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub profile"
           >
             <icon
               name="uil:github"
@@ -51,7 +50,6 @@
             href="https://www.linkedin.com/in/roy-ketelaar-36821b6b/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
           >
             <icon
               name="entypo-social:linkedin"
