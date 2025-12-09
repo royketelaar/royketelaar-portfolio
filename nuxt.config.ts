@@ -23,6 +23,14 @@ export default defineNuxtConfig({
     'nuxt-studio'
   ],
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  },
+
   studio: {
     repository: {
       provider: 'github',
