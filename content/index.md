@@ -25,7 +25,6 @@ Outside of work, I like experiencing new things and traveling to cool places.
 - HTML/SCSS
 - Playwright
 - SEO
-- Netlify
 
 ### Design & Methodology
 
