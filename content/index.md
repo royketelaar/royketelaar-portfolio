@@ -13,10 +13,6 @@ navigation:
 
 I am a frontend developer with a background in web design. I love learning new things, working with people and building applications that users find useful.
 
-I work from a Design Thinking perspective. First understanding the user and putting yourself in their position before actually starting the work.
-
-Outside of work, I like experiencing new things and traveling to cool places.
-
 ### Programming
 
 - JavaScript / TypeScript
