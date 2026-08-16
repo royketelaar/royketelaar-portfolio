@@ -32,6 +32,14 @@ export default defineNuxtConfig({
     }
   },
 
+  icon: {
+    // Inline SVGs at build time; no icon requests at runtime.
+    mode: 'svg',
+    clientBundle: {
+      scan: true
+    }
+  },
+
   studio: {
     repository: {
       provider: 'github',
