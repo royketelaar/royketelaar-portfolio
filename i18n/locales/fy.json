@@ -1,5 +1,7 @@
 {
-  "lang": { "label": "Taal" },
+  "lang": {
+    "label": "Taal"
+  },
   "meta": {
     "title": "Roy Ketelaar - Front-end developer",
     "description": "Roy Ketelaar, front-end developer en webdesigner. Ik bou tagonklike, flugge websides en applikaasjes dêr't brûkers echt wat oan hawwe."
@@ -8,6 +10,7 @@
   "contact": "Nim kontakt op",
   "github": "Roy Ketelaar op GitHub (iepenet yn in nij ljepblêd)",
   "linkedin": "Roy Ketelaar op LinkedIn (iepenet yn in nij ljepblêd)",
-  "terms": "Algemiene betingsten (PDF, Nederlânsk)",
+  "terms": "Algemiene betingsten (PDF)",
+  "termsHref": "/algemene-voorwaarden-fy.pdf",
   "privacy": "Privacyferklearring (PDF, Nederlânsk)"
 }
