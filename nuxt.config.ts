@@ -10,7 +10,9 @@ export default defineNuxtConfig({
       // Pre-render the homepage
       routes: ['/'],
       // Then crawl all the links on the page
-      crawlLinks: true
+      crawlLinks: true,
+      // Write /fy as fy.html (not fy/index.html), so Netlify serves /fy without a 301 to /fy/.
+      autoSubfolderIndex: false
     }
   },
 
