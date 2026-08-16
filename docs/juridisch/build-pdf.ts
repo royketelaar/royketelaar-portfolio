@@ -35,6 +35,18 @@ const documents = [
     output: 'privacy-verklaring.pdf',
     footer: 'Roy Ketelaar · Privacyverklaring · versie augustus 2026',
     page: (n: string, total: string) => `pagina ${n} van ${total}`
+  },
+  {
+    source: 'privacyverklaring-en.html',
+    output: 'privacy-verklaring-en.pdf',
+    footer: 'Roy Ketelaar · Privacy statement · version August 2026',
+    page: (n: string, total: string) => `page ${n} of ${total}`
+  },
+  {
+    source: 'privacyverklaring-fy.html',
+    output: 'privacy-verklaring-fy.pdf',
+    footer: 'Roy Ketelaar · Privacyferklearring · ferzje augustus 2026',
+    page: (n: string, total: string) => `side ${n} fan ${total}`
   }
 ]
 

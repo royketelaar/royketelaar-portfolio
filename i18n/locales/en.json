@@ -12,5 +12,6 @@
   "linkedin": "Roy Ketelaar on LinkedIn (opens in a new tab)",
   "terms": "Terms and conditions (PDF)",
   "termsHref": "/algemene-voorwaarden-en.pdf",
-  "privacy": "Privacy statement (PDF, Dutch)"
+  "privacy": "Privacy statement (PDF)",
+  "privacyHref": "/privacy-verklaring-en.pdf"
 }

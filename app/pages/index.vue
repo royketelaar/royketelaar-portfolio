@@ -83,8 +83,8 @@
             {{ t('terms') }}
           </a>
           <a
-            href="/privacy-verklaring.pdf"
-            hreflang="nl"
+            :href="t('privacyHref')"
+            :hreflang="locale"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-sm text-red-900 underline transition-colors hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
