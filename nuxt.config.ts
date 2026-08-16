@@ -21,15 +21,21 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
     'nuxt-studio',
-    '@nuxt/hints'
+    '@nuxt/hints',
+    '@nuxtjs/i18n'
   ],
 
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en'
-      }
-    }
+  i18n: {
+    defaultLocale: 'nl',
+    strategy: 'prefix_except_default',
+    baseUrl: 'https://royketelaar.nl',
+    locales: [
+      { code: 'nl', language: 'nl-NL', name: 'Nederlands', file: 'nl.json' },
+      { code: 'fy', language: 'fy-NL', name: 'Frysk', file: 'fy.json' },
+      { code: 'en', language: 'en', name: 'English', file: 'en.json' }
+    ],
+    // The visitor picks the language; no redirect, no cookie (WCAG 3.2.5).
+    detectBrowserLanguage: false
   },
 
   icon: {

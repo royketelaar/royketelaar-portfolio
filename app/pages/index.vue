@@ -1,5 +1,6 @@
 <template>
-  <main v-if="home" class="min-h-screen py-32">
+  <main v-if="home" class="relative min-h-screen py-32">
+    <LanguageSwitcher />
     <div
       class="fixed inset-0 bg-cover bg-center"
       :style="{ backgroundImage: `url(${backgroundPlaceholder})` }"
@@ -23,7 +24,7 @@
     >
       <nuxt-picture
         src="/avatar.jpg"
-        alt="Portrait of Roy Ketelaar"
+        :alt="t('portrait')"
         class="contents"
         :img-attrs="{
           class:
@@ -45,13 +46,13 @@
             href="mailto:info@royketelaar.nl"
             class="mr-4 rounded-lg bg-red-900 px-4 py-3 text-white transition-colors hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
           >
-            Get in touch!
+            {{ t('contact') }}
           </a>
           <a
             href="https://github.com/royketelaar/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Roy Ketelaar on GitHub (opens in new tab)"
+            :aria-label="t('github')"
             class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
           >
             <icon name="uil:github" class="mx-2 size-8" aria-hidden="true" focusable="false" />
@@ -60,7 +61,7 @@
             href="https://www.linkedin.com/in/roy-ketelaar-36821b6b/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Roy Ketelaar on LinkedIn (opens in new tab)"
+            :aria-label="t('linkedin')"
             class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
           >
             <icon
@@ -74,21 +75,21 @@
         <div class="mt-6 flex gap-4">
           <a
             href="/algemene-voorwaarden.pdf"
+            hreflang="nl"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Download Algemene Voorwaarden (PDF)"
             class="rounded-sm text-red-900 underline transition-colors hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
           >
-            Algemene Voorwaarden
+            {{ t('terms') }}
           </a>
           <a
             href="/privacy-verklaring.pdf"
+            hreflang="nl"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Download Privacy Verklaring (PDF)"
             class="rounded-sm text-red-900 underline transition-colors hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
           >
-            Privacy Verklaring
+            {{ t('privacy') }}
           </a>
         </div>
       </div>
@@ -97,15 +98,20 @@
 </template>
 
 <script lang="ts" setup>
-const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
+const { locale, t } = useI18n()
+
+const { data: home } = await useAsyncData(
+  () => `home-${locale.value}`,
+  () => queryCollection('content').path(`/${locale.value}`).first()
+)
 
 // 32px blurred WebP of /background.jpg, shown until the real image loads.
 const backgroundPlaceholder =
   'data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBQCdASogABgAPu1qrlCppaQiqAqpMB2JQBdmcBAUohR64x54WmZtsAQInSkn9VPzMAD+ufmFQLs6OOav4TOua10bhS19/7bbD8otopgP69EQixqPYUQQAEYFZXU3161pBjNZRimWphWEII8yhQddd4JbMX1Y5ojkHNVANIila06sVpnDtmttE8FVEfkOiVBCZojAAAA='
 
 useSeoMeta({
-  title: home.value?.title,
-  description: home.value?.description
+  title: () => home.value?.title,
+  description: () => home.value?.description
 })
 </script>
 

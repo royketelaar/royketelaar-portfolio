@@ -1,0 +1,13 @@
+{
+  "lang": { "label": "Language" },
+  "meta": {
+    "title": "Roy Ketelaar - Front-end developer",
+    "description": "Roy Ketelaar, front-end developer and web designer. I build accessible, fast websites and applications that users find useful."
+  },
+  "portrait": "Portrait of Roy Ketelaar",
+  "contact": "Get in touch",
+  "github": "Roy Ketelaar on GitHub (opens in a new tab)",
+  "linkedin": "Roy Ketelaar on LinkedIn (opens in a new tab)",
+  "terms": "Terms and conditions (PDF, Dutch)",
+  "privacy": "Privacy statement (PDF, Dutch)"
+}
