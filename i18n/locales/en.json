@@ -13,5 +13,12 @@
   "terms": "Terms and conditions (PDF)",
   "termsHref": "/algemene-voorwaarden-en.pdf",
   "privacy": "Privacy statement (PDF)",
-  "privacyHref": "/privacy-verklaring-en.pdf"
+  "privacyHref": "/privacy-verklaring-en.pdf",
+  "showreel": {
+    "title": "Brands and clients I have worked for",
+    "zzp": "As a freelancer",
+    "snakeware": "At Snakeware",
+    "accell": "At Accell Group",
+    "link": "{name} (opens in a new tab)"
+  }
 }

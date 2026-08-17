@@ -13,5 +13,12 @@
   "terms": "Algemene voorwaarden (PDF)",
   "termsHref": "/algemene-voorwaarden.pdf",
   "privacy": "Privacyverklaring (PDF)",
-  "privacyHref": "/privacy-verklaring.pdf"
+  "privacyHref": "/privacy-verklaring.pdf",
+  "showreel": {
+    "title": "Merken en klanten waar ik voor werkte",
+    "zzp": "Als zzp'er",
+    "snakeware": "Bij Snakeware",
+    "accell": "Bij Accell Group",
+    "link": "{name} (opent in een nieuw tabblad)"
+  }
 }

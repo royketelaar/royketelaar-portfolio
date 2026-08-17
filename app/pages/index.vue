@@ -93,6 +93,7 @@
           </a>
         </div>
       </div>
+      <LogoShowreel />
     </div>
   </main>
 </template>

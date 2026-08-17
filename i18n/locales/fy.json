@@ -13,5 +13,12 @@
   "terms": "Algemiene betingsten (PDF)",
   "termsHref": "/algemene-voorwaarden-fy.pdf",
   "privacy": "Privacyferklearring (PDF)",
-  "privacyHref": "/privacy-verklaring-fy.pdf"
+  "privacyHref": "/privacy-verklaring-fy.pdf",
+  "showreel": {
+    "title": "Merken en klanten dêr't ik foar wurke",
+    "zzp": "As zzp'er",
+    "snakeware": "By Snakeware",
+    "accell": "By Accell Group",
+    "link": "{name} (iepenet yn in nij ljepblêd)"
+  }
 }
