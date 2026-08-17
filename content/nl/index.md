@@ -1,6 +1,6 @@
 ---
 title: Roy Ketelaar - Front-end developer
-description: Roy Ketelaar, ervaren front-end developer. Ik bouw snelle, toegankelijke websites die goed vindbaar zijn en voldoen aan WCAG en de European Accessibility Act.
+description: Roy Ketelaar, ervaren front-end developer. Ik ontwerp en bouw websites die logisch werken voor gebruikers en technisch kloppen: snel, vindbaar en toegankelijk volgens WCAG en de European Accessibility Act.
 navigation:
   title: Roy Ketelaar - Front-end developer
   description: Roy Ketelaar - Front-end developer
@@ -13,9 +13,7 @@ navigation:
 
 Ik ben een ervaren front-end developer met een sterke focus op gebruiksvriendelijkheid en toegankelijkheid.
 
-Ik bouw websites die technisch helemaal kloppen: snel, goed vindbaar in Google en voor iedereen te gebruiken. Ook volgens de wettelijke toegankelijkheidsregels (WCAG en de European Accessibility Act). Dat doe ik graag samen met de klant, maar ik werk net zo goed een eigen idee uit.
-
-Bij Accell Group werkte ik aan de websites van fietsmerken als Batavus, Sparta, Raleigh, Lapierre, Ghost, Haibike, Winora en XLC.
+Ik ontwerp en bouw websites die logisch werken voor de mensen die ze gebruiken, en die technisch kloppen: snel, goed vindbaar en toegankelijk volgens WCAG en de European Accessibility Act. Ik werk graag samen, van eerste idee tot een site die goed werkt en er goed uitziet.
 
 ### Programmeren
 
