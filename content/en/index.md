@@ -15,7 +15,7 @@ I am an experienced front-end developer with a strong focus on usability and acc
 
 I build websites that are technically sound: fast, easy to find on Google and usable by everyone. Also compliant with the legal accessibility rules (WCAG and the European Accessibility Act). I like doing that together with the client, but I am just as happy working out an idea of my own.
 
-At Accell Group I worked on the websites of bicycle brands such as Batavus, Sparta, Koga, Raleigh, Lapierre, Ghost, Haibike, Winora and XLC.
+At Accell Group I worked on the websites of bicycle brands such as Batavus, Sparta, Raleigh, Lapierre, Ghost, Haibike, Winora and XLC.
 
 ### Programming
 
