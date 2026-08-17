@@ -15,7 +15,7 @@ Ik ben een ervaren front-end developer met een sterke focus op gebruiksvriendeli
 
 Ik bouw websites die technisch helemaal kloppen: snel, goed vindbaar in Google en voor iedereen te gebruiken. Ook volgens de wettelijke toegankelijkheidsregels (WCAG en de European Accessibility Act). Dat doe ik graag samen met de klant, maar ik werk net zo goed een eigen idee uit.
 
-Bij Accell Group werkte ik aan de websites van fietsmerken als Batavus, Sparta, Koga, Raleigh, Lapierre, Ghost, Haibike, Winora en XLC.
+Bij Accell Group werkte ik aan de websites van fietsmerken als Batavus, Sparta, Raleigh, Lapierre, Ghost, Haibike, Winora en XLC.
 
 ### Programmeren
 
