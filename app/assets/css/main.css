@@ -1,0 +1,203 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --canvas: #f3efe4;
+  --panel: #faf7f0;
+  --ink: #1b1914;
+  --muted: #564f44;
+  --line: #d9d0c0;
+  --line-strong: #8a8172;
+  --accent: #3e4c27;
+  --clay: #8a3b32;
+  --soft: #e7e0d2;
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: #12140e;
+  --panel: #1b1f16;
+  --ink: #f3eee4;
+  --muted: #c9c1af;
+  --line: #3a4032;
+  --line-strong: #6d7862;
+  --accent: #d5e2b5;
+  --clay: #f0b2a4;
+  --soft: #24281d;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-clay: var(--clay);
+  --color-soft: var(--soft);
+  --font-sans: 'Atkinson Hyperlegible', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-serif: Fraunces, 'Iowan Old Style', Palatino, 'Palatino Linotype', serif;
+}
+
+@layer base {
+  html {
+    background: var(--canvas);
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background:
+      radial-gradient(
+        ellipse 70% 45% at 0% -10%,
+        color-mix(in oklab, var(--accent) 14%, transparent),
+        transparent 55%
+      ),
+      var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    text-wrap: balance;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--canvas);
+  }
+
+  #inhoud:focus,
+  #inhoud:focus-visible {
+    outline: none;
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--canvas);
+  }
+
+  .btn-primary:hover {
+    background: var(--ink);
+    color: var(--canvas);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .text-link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  .text-link:hover {
+    color: var(--accent);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .rise {
+    animation: rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .rise-2 {
+    animation-delay: 90ms;
+  }
+
+  .rise-3 {
+    animation-delay: 180ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+  }
+}

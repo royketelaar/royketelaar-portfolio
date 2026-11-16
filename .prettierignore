@@ -1,0 +1,10 @@
+.nuxt
+.output
+dist
+node_modules
+coverage
+public/**/*.pdf
+public/**/*.jpg
+public/**/*.png
+public/**/*.ico
+bun.lock
