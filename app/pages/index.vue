@@ -1,140 +1,101 @@
 <template>
-  <main v-if="home" class="relative min-h-screen py-32">
-    <LanguageSwitcher />
-    <div
-      class="fixed inset-0 bg-cover bg-center"
-      :style="{ backgroundImage: `url(${backgroundPlaceholder})` }"
-      aria-hidden="true"
-    >
-      <nuxt-picture
-        src="/background.jpg"
-        alt=""
-        class="contents"
-        :img-attrs="{ class: 'h-full w-full object-cover', fetchpriority: 'low' }"
-        quality="50"
-        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
-        densities="x1"
-        format="avif,webp"
-        :preload="{ fetchPriority: 'low' }"
-      />
-    </div>
-    <div
-      v-if="home"
-      class="relative mx-8 rounded-2xl bg-stone-50 bg-opacity-80 p-8 pt-48 text-stone-950 md:mx-16 md:px-16 md:pb-16 lg:pt-16 xl:mx-auto xl:max-w-4xl"
-    >
-      <nuxt-picture
-        src="/avatar.jpg"
-        :alt="t('portrait')"
-        class="contents"
-        :img-attrs="{
-          class:
-            'absolute -top-16 left-1/2 h-56 w-56 -translate-x-1/2 transform rounded-full lg:left-auto lg:right-0 lg:top-0 lg:m-8 lg:h-64 lg:w-64 lg:transform-none',
-          fetchpriority: 'high'
-        }"
-        quality="60"
-        width="224"
-        height="224"
-        sizes="224px lg:256px"
-        fit="cover"
-        format="avif,webp"
-        :preload="{ fetchPriority: 'high' }"
-      />
-      <content-renderer :value="home" class="custom-typography lg:w-2/3 lg:pr-4" />
-      <div class="mt-12 flex flex-col items-start">
-        <div class="flex items-center">
-          <a
-            href="mailto:info@royketelaar.nl"
-            class="mr-4 rounded-lg bg-red-900 px-4 py-3 text-white transition-colors hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
-          >
-            {{ t('contact') }}
-          </a>
-          <a
-            href="https://github.com/royketelaar/"
-            target="_blank"
-            rel="noopener noreferrer"
-            :aria-label="t('github')"
-            class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
-          >
-            <icon name="uil:github" class="mx-2 size-8" aria-hidden="true" focusable="false" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/roy-ketelaar-36821b6b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            :aria-label="t('linkedin')"
-            class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
-          >
-            <icon
-              name="entypo-social:linkedin"
-              class="mx-2 size-8"
-              aria-hidden="true"
-              focusable="false"
-            />
-          </a>
+  <div>
+    <section class="lg:flex lg:min-h-[calc(100svh-8rem)] lg:flex-col lg:justify-center">
+      <div class="grid items-end gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)]">
+        <div class="rise">
+          <p class="text-sm tracking-[0.16em] text-accent uppercase">
+            01 — {{ t(copy.hero.kicker) }}
+          </p>
+          <h1 class="mt-5 text-[clamp(3.2rem,7.4vw,6.3rem)] leading-[0.96] tracking-[-0.04em]">
+            <span class="block">{{ t(copy.hero.line1) }}</span>
+            <span class="block">
+              <em class="text-accent italic">{{ t(copy.hero.em) }}</em
+              >{{ t(copy.hero.line2) }}
+            </span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-pretty text-muted">
+            {{ t(copy.hero.lede) }}
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <NuxtLink class="btn btn-primary" :to="localePath('/projecten')">
+              {{ t(copy.hero.work) }}
+            </NuxtLink>
+            <NuxtLink class="btn btn-ghost" :to="localePath('/contact')">
+              {{ t(copy.hero.contact) }}
+            </NuxtLink>
+          </div>
+          <p class="mt-8 text-sm tracking-[0.08em] text-muted uppercase">
+            {{ stackLine.join(' · ') }}
+          </p>
         </div>
-        <div class="mt-6 flex gap-4">
-          <a
-            :href="t('termsHref')"
-            :hreflang="locale"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-sm text-red-900 underline transition-colors hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
-          >
-            {{ t('terms') }}
-          </a>
-          <a
-            :href="t('privacyHref')"
-            :hreflang="locale"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-sm text-red-900 underline transition-colors hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
-          >
-            {{ t('privacy') }}
-          </a>
+        <div class="rise rise-3">
+          <SitePortrait priority />
         </div>
       </div>
-    </div>
-  </main>
+    </section>
+
+    <section class="mt-20 border-t border-line pt-12 md:mt-8" :aria-labelledby="indexTitle">
+      <h2 :id="indexTitle" class="text-3xl">{{ t(copy.index.title) }}</h2>
+      <ol class="mt-4">
+        <li v-for="item in index" :key="item.to">
+          <NuxtLink
+            :to="localePath(item.to)"
+            class="group grid grid-cols-[3.5rem_1fr] gap-4 border-b border-line py-6"
+          >
+            <span class="font-serif text-2xl text-accent italic">{{ item.index }}</span>
+            <span>
+              <span class="block text-3xl group-hover:text-accent">{{ t(item.title) }}</span>
+              <span class="mt-2 block text-muted">{{ t(item.body) }}</span>
+            </span>
+          </NuxtLink>
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-20" aria-labelledby="gekozen-werk">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <h2 id="gekozen-werk" class="text-3xl">{{ t(copy.featured.title) }}</h2>
+        <NuxtLink class="text-link" :to="localePath('/projecten')">{{
+          t(copy.featured.all)
+        }}</NuxtLink>
+      </div>
+      <ol class="mt-6">
+        <li v-for="project in featured" :key="project.slug">
+          <NuxtLink
+            :to="localePath(`/projecten#${project.slug}`)"
+            class="group grid gap-2 border-t border-line-strong py-6 md:grid-cols-[7rem_1fr_1.4fr] md:items-baseline"
+          >
+            <span class="font-serif text-2xl text-accent italic">
+              {{ String(projectIndex(project.slug)).padStart(2, '0') }}
+            </span>
+            <span class="text-2xl group-hover:text-accent">{{ project.title }}</span>
+            <span class="line-clamp-3 text-muted">{{ t(project.summary) }}</span>
+          </NuxtLink>
+        </li>
+      </ol>
+    </section>
+  </div>
 </template>
 
-<script lang="ts" setup>
-const { locale, t } = useI18n()
+<script setup lang="ts">
+import { copy, projectIndex, projects, stackLine } from '~/data/site'
 
-const { data: home } = await useAsyncData(
-  () => `home-${locale.value}`,
-  () => queryCollection('content').path(`/${locale.value}`).first()
+const { t } = useSite()
+const localePath = useLocalePath()
+
+usePageMeta(
+  () => t(copy.seo.homeTitle),
+  () => t(copy.seo.homeDescription)
 )
 
-// 32px blurred WebP of /background.jpg, shown until the real image loads.
-const backgroundPlaceholder =
-  'data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBQCdASogABgAPu1qrlCppaQiqAqpMB2JQBdmcBAUohR64x54WmZtsAQInSkn9VPzMAD+ufmFQLs6OOav4TOua10bhS19/7bbD8otopgP69EQixqPYUQQAEYFZXU3161pBjNZRimWphWEII8yhQddd4JbMX1Y5ojkHNVANIila06sVpnDtmttE8FVEfkOiVBCZojAAAA='
+const indexTitle = 'inhoudsopgave'
 
-useSeoMeta({
-  title: () => home.value?.title,
-  description: () => home.value?.description
-})
+const index = [
+  { index: '02', to: '/projecten', title: copy.nav.work, body: copy.index.work },
+  { index: '03', to: '/over', title: copy.nav.about, body: copy.index.about },
+  { index: '04', to: '/lab', title: copy.nav.lab, body: copy.index.lab },
+  { index: '05', to: '/contact', title: copy.nav.contact, body: copy.index.contact }
+]
+
+const featured = projects.filter((project) => project.featured)
 </script>
-
-<style lang="scss" scoped>
-.custom-typography {
-  :deep(h1) {
-    @apply mb-1 text-center font-serif text-4xl font-black lg:text-left;
-  }
-
-  :deep(h2) {
-    @apply mb-6 text-center text-xl lg:text-left;
-  }
-
-  :deep(h3) {
-    @apply mb-1 mt-4 font-bold;
-  }
-
-  :deep(p) {
-    @apply mb-4 text-stone-950;
-  }
-
-  :deep(ul) {
-    @apply list-inside list-disc;
-  }
-}
-</style>
